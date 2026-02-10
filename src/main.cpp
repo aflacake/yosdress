@@ -9,7 +9,10 @@ int main() {
     );
 
     Character character;
-    Button hairBtn({120.f, 40.f}, {600.f, 100.f});
+	Button hairBtn({120.f, 40.f}, {600.f, 100.f});
+    Button randomHairBtn({120.f, 40.f}, {600.f, 160.f});
+    Button clothesBtn({120.f, 40.f}, {600.f, 220.f});
+    Button accessoryBtn({120.f, 40.f}, {600.f, 280.f});
 
     while (window.isOpen()) {
         while (auto event = window.pollEvent()) {
@@ -19,6 +22,15 @@ int main() {
 
         if (hairBtn.isClicked(window)) {
             character.nextHair();
+        }
+        if (randomHairBtn.isClicked(window)) {
+            character.randomHair();
+        }
+        if (clothesBtn.isClicked(window)) {
+            character.nextClothes();
+        }
+        if (accessoryBtn.isClicked(window)) {
+            character.nextAccessory();
         }
 
         window.clear(sf::Color::White);

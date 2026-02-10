@@ -17,5 +17,11 @@ From the file where YosDress is located, compile it with SFML. If SFML isn't alr
 File location: `cd /c/[USER]/[USER]/[DOCUMENTS]/[TO]/yosdress`
 
 Compile: `g++ src/main.cpp -lsfml-graphics -lsfml-window -lsfml-system -o yosdress`
+Or
+```
+g++ -std=c++20 src/main.cpp src/Character.cpp src/Button.cpp \
+    -lsfml-graphics -lsfml-window -lsfml-system \
+    -o yosdress
+```
 
 Run: `./yosdress`
