@@ -14,6 +14,7 @@ public:
     void draw(sf::RenderWindow& window);
 
 private:
+    // Textures & sprites
     sf::Texture bodyTex;
     std::optional<sf::Sprite> body;
 
@@ -28,4 +29,10 @@ private:
     std::vector<sf::Texture> accessoryTextures;
     std::optional<sf::Sprite> accessory;
     int currentAccessory = 0;
+
+    // Posisi dasar dan offset
+    sf::Vector2f bodyPos;        // posisi dasar body
+    sf::Vector2f hairOffset;     // offset relatif untuk hair
+    sf::Vector2f clothesOffset;  // offset relatif untuk clothes
+    sf::Vector2f accessoryOffset;// offset relatif untuk accessories
 };
