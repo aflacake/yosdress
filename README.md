@@ -1,6 +1,8 @@
 # YosDress
 Dress up game for Windows
 
+[![Download YosDress](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/yosdress/files/latest/download)
+
 ## Contribution
 Via MSYS2 not standalone (SourceForge/WinLibs).
 
