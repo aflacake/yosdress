@@ -21,8 +21,8 @@ File location: `cd /c/[USER]/[USER]/[DOCUMENTS]/[TO]/yosdress`
 Compile: `g++ src/main.cpp -lsfml-graphics -lsfml-window -lsfml-system -o yosdress`
 Or
 ```
-g++ -std=c++20 src/main.cpp src/Character.cpp src/Button.cpp \
-    -lsfml-graphics -lsfml-window -lsfml-system \
+g++ -std=c++20 src/main.cpp src/Character.cpp src/Scene.cpp \
+    -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio \
     -o yosdress
 ```
 
