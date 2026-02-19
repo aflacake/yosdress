@@ -26,6 +26,9 @@ private:
 	
     sf::Font fontBaloo;
     sf::Font fontArial;
+	
+	sf::Texture logoTex;
+	std::optional<sf::Sprite> logo;
 
     sf::RectangleShape playButton;
     std::optional<sf::Text> playText;

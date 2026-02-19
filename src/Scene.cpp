@@ -10,7 +10,7 @@ Scene::Scene() {
     if (!boyTex.loadFromFile("assets/ui/pose-boy.png"))
         throw std::runtime_error("Failed to load pose-boy.png");
     boy.emplace(boyTex);
-    boy->setPosition({150.f, 200.f});
+    boy->setPosition({-20.f, 200.f});
 
     if (!girlTex.loadFromFile("assets/ui/pose-girl.png"))
         throw std::runtime_error("Failed to load pose-girl.png");
@@ -24,6 +24,11 @@ Scene::Scene() {
         throw std::runtime_error("Failed to load baloo2.ttf");
     if (!fontArial.openFromFile("assets/ui/arial.TTF"))
         throw std::runtime_error("Failed to load arial.TTF");
+	if (!logoTex.loadFromFile("assets/ui/logo.png"))
+		throw std::runtime_error("Failed to load logo.png");
+	logo.emplace(logoTex);
+	logo->setPosition({20.f, 70.f});
+	logo->setScale(sf::Vector2f(0.25f, 0.25f));
 
     // scale background to window size (800x600)
 	bg->setScale(sf::Vector2f(
@@ -42,26 +47,27 @@ Scene::Scene() {
     // Credit button
     creditButton.setSize({120.f, 40.f});
     creditButton.setFillColor(sf::Color(232, 180, 184));
-    creditButton.setPosition({20.f, 540.f});
+    creditButton.setPosition({20.f, 20.f});
 	creditText.emplace(fontArial, "Credit", 20);
 	creditText->setFillColor(sf::Color(75, 59, 64));
-	creditText->setPosition({40.f, 545.f});
+	creditText->setPosition({40.f, 25.f});
 }
 
 void Scene::drawIntro(sf::RenderWindow& window) {
     if (bg) window.draw(*bg);
-    if (boy) window.draw(*boy);
-    if (girl) window.draw(*girl);
+	if (girl) window.draw(*girl);
+	if (boy) window.draw(*boy);
 
     window.draw(playButton);
     if (playText) window.draw(*playText);
     window.draw(creditButton);
+	if (logo) window.draw(*logo);
     if (creditText) window.draw(*creditText);
 
     if (showCredit) {
         sf::Text creditInfo(fontArial, "Music by Abhishek M from Pixabay", 18);
         creditInfo.setFillColor(sf::Color::Black);
-        creditInfo.setPosition({200.f, 560.f});
+        creditInfo.setPosition({40.f, 70.f});
         window.draw(creditInfo);
     }
 }
