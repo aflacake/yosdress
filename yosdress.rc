@@ -1,0 +1,30 @@
+// yosdress.rc
+1 ICON "assets/ui/icon.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 0,3,0,0
+PRODUCTVERSION 0,3,0,0
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0x0L
+FILEOS 0x40004L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "FileDescription", "YosDress Dress-Up Game"
+            VALUE "FileVersion", "beta-v0.3"
+            VALUE "ProductName", "YosDress"
+            VALUE "ProductVersion", "v0.3-alpha"
+            VALUE "CompanyName", "Nazwa Shabrina Zain"
+            VALUE "LegalCopyright", "MIT License"
+            VALUE "Language", "C++"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1252
+    END
+END

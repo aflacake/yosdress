@@ -14,6 +14,11 @@ In MinGW64, type this command to download SFML:
    `pacman -S mingw-w64-x86_64-sfml`
 
 ### Compile YosDress
+#### Compile `.rc` file
+```
+windres yosdress.rc -O coff -o yosdress.res
+```
+
 From the file where YosDress is located, compile it with SFML. If SFML isn't already installed, compile it.
 
 File location: `cd /c/[USER]/[USER]/[DOCUMENTS]/[TO]/yosdress`
@@ -21,9 +26,9 @@ File location: `cd /c/[USER]/[USER]/[DOCUMENTS]/[TO]/yosdress`
 Compile: `g++ src/main.cpp -lsfml-graphics -lsfml-window -lsfml-system -o yosdress`
 Or
 ```
-g++ -std=c++20 src/main.cpp src/Character.cpp src/Scene.cpp \
+g++ -std=c++20 src/main.cpp src/Character.cpp src/Scene.cpp yosdress.res \
     -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio \
-    -o yosdress
+    -o yosdress.exe
 ```
 
 Run: `./yosdress`
